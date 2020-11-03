@@ -1,0 +1,15 @@
+<mat-toolbar>
+	<span>Search Component</span>
+</mat-toolbar>
+
+<div class="root-container">
+	<sad-search-form
+		[providers]="providers"
+		[model]="searchQuery$ | async"
+		(submit)="onSubmit($event)"
+	></sad-search-form>
+
+	<div class="mt-25">
+		<router-outlet></router-outlet>
+	</div>
+</div>
